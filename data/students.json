@@ -1,0 +1,33 @@
+[
+    {
+        "studentID" : "BK2017085",
+        "firstName" : "Tawanda",
+        "secondName" : "Chaka",
+        "major" : "Computer Science"
+    },
+    {
+        "studentID" : "BK2017085",
+        "firstName" : "Tawanda",
+        "secondName" : "Chaka",
+        "major" : "Computer Science"
+    },
+    {
+        "studentID" : "BK2017087",
+        "firstName" : "Slince",
+        "secondName" : "Kugotsi",
+        "major" : "Computer Science"
+    },
+    {
+        "studentID" : "BK2017088",
+        "firstName" : "Adrian",
+        "secondName" : "Hove",
+        "major" : "Computer Science"
+    },
+    {
+        "studentID" : "BK2017089",
+        "firstName" : "Greatfortune",
+        "secondName" : "Mamhova",
+        "major" : "Computer Science"
+    }
+
+]

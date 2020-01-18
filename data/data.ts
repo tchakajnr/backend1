@@ -1,9 +1,9 @@
-import jsonTours from "./tours.json";
-import jsonReviews from "./reviews.json";
+import studentsLog from "./students.json";
+import tourDetails from "./tours.json";
+import tourReviews from "./reviews.json";
 
 export class DataStore {
-    static tours = jsonTours;
-    static reviews = jsonReviews;
+    static students = studentsLog;
+    static tours = tourDetails;
+    static reviews = tourReviews;
 }
-
-
