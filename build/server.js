@@ -17,6 +17,10 @@ const apiUpdatePartial_1 = require("./api/tours/apiUpdatePartial");
 const apiGetStudentDetails_1 = require("./api/tours/apiGetStudentDetails");
 const apiGetStudentPayments_1 = require("./api/tours/apiGetStudentPayments");
 const apiSearchStudentPaymentDetails_1 = require("./api/tours/apiSearchStudentPaymentDetails");
+const apiAnnouncement_1 = require("./api/tours/apiAnnouncement");
+const apiGetAnnouncement_1 = require("./api/tours/apiGetAnnouncement");
+const apiDeleteAnnouncement_1 = require("./api/tours/apiDeleteAnnouncement");
+const apiUpdateAnnouncement_1 = require("./api/tours/apiUpdateAnnouncement");
 const path_1 = __importDefault(require("path"));
 const app = express_1.default();
 // console.log(JSON.stringify(DataStore.students));
@@ -30,12 +34,16 @@ app.get("/", (req, res, next) => {
 app.get("/students", apiGetStudentDetails_1.apiGetStudentDetails);
 app.get("/payments", apiGetStudentPayments_1.apiGetStudentPayments);
 app.get("/payments/:id", apiSearchStudentPaymentDetails_1.apiSearchStudentPaymentDetails);
+app.get("/announcement", apiGetAnnouncement_1.apiGetAnnouncement);
+app.post("/announcement", jsonParser, apiAnnouncement_1.apiAnnouncement);
 app.get("/tours", apiGetTours_1.apiGetTours);
 app.get("/tours/:id", apiGetToursDetail_1.apiGetToursDetail);
 app.post("/tours", jsonParser, apiCreateTours_1.apiCreateTour);
 app.delete("/tours/:id", apiDelete_1.apiDelete);
+app.delete("/announcement/:id", apiDeleteAnnouncement_1.apiDeleteAnnouncement);
 app.put("/tours/:id", jsonParser, apiUpdateTour_1.apiUpdateTour);
 app.patch("/tours/:id", jsonParser, apiUpdatePartial_1.apiUpdatePartial);
+app.patch("/announcement/:id", jsonParser, apiUpdateAnnouncement_1.apiUpdateAnnouncement);
 app.listen(process.env.PORT || 8091, () => {
     console.log("Server has successfully started");
 });

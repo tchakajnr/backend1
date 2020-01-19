@@ -18,7 +18,10 @@ import {apiUpdatePartial} from "./api/tours/apiUpdatePartial";
 import {apiGetStudentDetails} from "./api/tours/apiGetStudentDetails";
 import {apiGetStudentPayments} from "./api/tours/apiGetStudentPayments";
 import {apiSearchStudentPaymentDetails} from "./api/tours/apiSearchStudentPaymentDetails";
- 
+import {apiAnnouncement} from "./api/tours/apiAnnouncement";
+import {apiGetAnnouncement} from "./api/tours/apiGetAnnouncement";
+import {apiDeleteAnnouncement} from "./api/tours/apiDeleteAnnouncement";
+import {apiUpdateAnnouncement} from "./api/tours/apiUpdateAnnouncement";
 
 import path from "path";
 
@@ -38,7 +41,12 @@ app.get("/",(req,res,next)=>{
 //student get methods
 app.get("/students",apiGetStudentDetails);
 app.get("/payments",apiGetStudentPayments);
-app.get("/payments/:id",apiSearchStudentPaymentDetails)
+app.get("/payments/:id",apiSearchStudentPaymentDetails);
+app.get("/announcement",apiGetAnnouncement);
+
+
+
+app.post("/announcement",jsonParser, apiAnnouncement);
 
  
 
@@ -52,9 +60,13 @@ app.post("/tours",jsonParser, apiCreateTour);
 
 app.delete("/tours/:id",apiDelete);
 
+app.delete("/announcement/:id",apiDeleteAnnouncement);
+
 app.put("/tours/:id",jsonParser,apiUpdateTour);
 
 app.patch("/tours/:id",jsonParser,apiUpdatePartial);
+app.patch("/announcement/:id",jsonParser,apiUpdateAnnouncement);
+
 
 
 app.listen(process.env.PORT||8091,()=>{console.log("Server has successfully started");
