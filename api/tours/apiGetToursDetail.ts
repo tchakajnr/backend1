@@ -1,15 +1,15 @@
 import { DataStore } from "../../data/data";
 import { RequestHandler} from "express";
 import { TourDetail } from "../../model/shared/tourDetail";
-import { fileMapper } from "../general/static";
+ 
 
 export const apiGetToursDetail: RequestHandler = (req,res,next)=>{
      const tourID = req.params.id;
      const selectedTour = DataStore.tours.find((element:any)=> element.id == tourID);
      if(selectedTour){
-         const imageURLs = selectedTour.img.map(fileMapper(req.app.get("env")));
+          
          const selectedReviews = DataStore.reviews.filter((item:any)=>item.tourID == tourID);
-         res.json(new TourDetail(selectedTour, selectedReviews,imageURLs));
+         res.json(new TourDetail(selectedTour, selectedReviews));
      }else{
          res.json({"status":"false","message":"Element not found"});
      }

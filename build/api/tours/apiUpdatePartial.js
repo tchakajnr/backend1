@@ -13,8 +13,7 @@ exports.apiUpdatePartial = (req, res, next) => {
             tourCategory: req.body.tourCategory || originalTour.tourCategory,
             tourDescription: req.body.tourDescription || originalTour.tourDescription,
             price: req.body.price || originalTour.price,
-            currency: req.body.currency || originalTour.currency,
-            img: originalTour.img
+            currency: req.body.currency || originalTour.currency
         };
         data_1.DataStore.tours[tourIndex] = newTour;
         res.json({ "status": "success", "message": "Element succesfully updated!!!" });

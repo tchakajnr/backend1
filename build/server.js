@@ -14,7 +14,6 @@ const apiCreateTours_1 = require("./api/tours/apiCreateTours");
 const apiDelete_1 = require("./api/tours/apiDelete");
 const apiUpdateTour_1 = require("./api/tours/apiUpdateTour");
 const apiUpdatePartial_1 = require("./api/tours/apiUpdatePartial");
-const apiUploadImage_1 = require("./api/tours/apiUploadImage");
 const path_1 = __importDefault(require("path"));
 const app = express_1.default();
 // console.log(JSON.stringify(DataStore.students));
@@ -27,7 +26,6 @@ app.get("/", (req, res, next) => {
 app.get("/tours", apiGetTours_1.apiGetTours);
 app.get("/tours/:id", apiGetToursDetail_1.apiGetToursDetail);
 app.post("/tours", jsonParser, apiCreateTours_1.apiCreateTour);
-app.post("/tours/:id/img", apiUploadImage_1.apiUploadImage);
 app.delete("/tours/:id", apiDelete_1.apiDelete);
 app.put("/tours/:id", jsonParser, apiUpdateTour_1.apiUpdateTour);
 app.patch("/tours/:id", jsonParser, apiUpdatePartial_1.apiUpdatePartial);

@@ -13,8 +13,7 @@ export const apiUpdatePartial: RequestHandler = (req,res,next)=>{
             tourCategory:req.body.tourCategory || originalTour.tourCategory,
             tourDescription:req.body.tourDescription || originalTour.tourDescription,
             price: req.body.price|| originalTour.price,
-            currency:  req.body.currency || originalTour.currency,
-            img:originalTour.img
+            currency:  req.body.currency || originalTour.currency
     
         }
         DataStore.tours[tourIndex] = newTour;

@@ -15,7 +15,7 @@ import { apiCreateTour } from "./api/tours/apiCreateTours";
 import {apiDelete} from "./api/tours/apiDelete";
 import {apiUpdateTour} from "./api/tours/apiUpdateTour";
 import {apiUpdatePartial} from "./api/tours/apiUpdatePartial";
-import {apiUploadImage} from "./api/tours/apiUploadImage";
+ 
 
 import path from "path";
 
@@ -38,7 +38,7 @@ app.get("/tours/:id",apiGetToursDetail);
 
 
 app.post("/tours",jsonParser, apiCreateTour);
-app.post("/tours/:id/img",apiUploadImage);
+ 
 
 app.delete("/tours/:id",apiDelete);
 

@@ -1,7 +1,6 @@
 [
     {
         "id": "id-0",
-        "img": ["img01.jpg"],
         "location": "Paris",
         "tourTitle": "Paris 1-Hour Night Cruise",
         "tourCategory": "Sailing and Water Tours",
@@ -16,7 +15,6 @@
         "tourCategory": "Sightseeing",
         "tourDescription": "Get to know New York City on a 4- or 8-hour walking tour with a private guide",
         "price": 190,
-        "currency": "USD",
-        "img": ["download.jpeg"]
+        "currency": "USD"
     }
 ]
