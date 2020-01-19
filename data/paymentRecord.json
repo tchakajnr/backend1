@@ -3,7 +3,7 @@
         "studentID" : "BK2017085",
         "January"   :"30",
         "February"  :"30",
-        "MARCH"     :"30"
+        "March"     :"30"
         
         
     },
@@ -11,13 +11,13 @@
         "studentID" : "BK2017080",
         "January"   :"10",
         "February"   :"",
-        "MARCH"   :"60"
+        "March"   :"60"
     },
     {
         "studentID" : "BK2017087",
         "January"   :"30",
         "February"   :"160",
-        "MARCH"   :""
+        "March"   :""
     },
     {
         "studentID" : "BK2017088",

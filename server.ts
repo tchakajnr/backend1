@@ -15,6 +15,9 @@ import { apiCreateTour } from "./api/tours/apiCreateTours";
 import {apiDelete} from "./api/tours/apiDelete";
 import {apiUpdateTour} from "./api/tours/apiUpdateTour";
 import {apiUpdatePartial} from "./api/tours/apiUpdatePartial";
+import {apiGetStudentDetails} from "./api/tours/apiGetStudentDetails";
+import {apiGetStudentPayments} from "./api/tours/apiGetStudentPayments";
+import {apiSearchStudentPaymentDetails} from "./api/tours/apiSearchStudentPaymentDetails";
  
 
 import path from "path";
@@ -31,6 +34,13 @@ app.use("/static",express.static(path.resolve("./","public","img")));
 app.get("/",(req,res,next)=>{
     res.send("Tour booking API");
 });
+
+//student get methods
+app.get("/students",apiGetStudentDetails);
+app.get("/payments",apiGetStudentPayments);
+app.get("/payments/:id",apiSearchStudentPaymentDetails)
+
+ 
 
 app.get("/tours",apiGetTours);
 

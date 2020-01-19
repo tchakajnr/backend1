@@ -14,6 +14,9 @@ const apiCreateTours_1 = require("./api/tours/apiCreateTours");
 const apiDelete_1 = require("./api/tours/apiDelete");
 const apiUpdateTour_1 = require("./api/tours/apiUpdateTour");
 const apiUpdatePartial_1 = require("./api/tours/apiUpdatePartial");
+const apiGetStudentDetails_1 = require("./api/tours/apiGetStudentDetails");
+const apiGetStudentPayments_1 = require("./api/tours/apiGetStudentPayments");
+const apiSearchStudentPaymentDetails_1 = require("./api/tours/apiSearchStudentPaymentDetails");
 const path_1 = __importDefault(require("path"));
 const app = express_1.default();
 // console.log(JSON.stringify(DataStore.students));
@@ -23,6 +26,10 @@ app.use("/static", express_1.default.static(path_1.default.resolve("./", "public
 app.get("/", (req, res, next) => {
     res.send("Tour booking API");
 });
+//student get methods
+app.get("/students", apiGetStudentDetails_1.apiGetStudentDetails);
+app.get("/payments", apiGetStudentPayments_1.apiGetStudentPayments);
+app.get("/payments/:id", apiSearchStudentPaymentDetails_1.apiSearchStudentPaymentDetails);
 app.get("/tours", apiGetTours_1.apiGetTours);
 app.get("/tours/:id", apiGetToursDetail_1.apiGetToursDetail);
 app.post("/tours", jsonParser, apiCreateTours_1.apiCreateTour);
